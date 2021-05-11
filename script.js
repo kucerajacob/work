@@ -1,94 +1,15 @@
-// var html = document.documentElement;
-// var body = document.body;
-
-// var scroller = {
-// 	target: document.querySelector("#scroll-container"),
-// 	ease: 0.08, // <= scroll speed
-// 	endY: 0,
-// 	y: 0,
-// 	resizeRequest: 1,
-// 	scrollRequest: 0,
-// };
-
-// var requestId = null;
-
-// TweenLite.set(scroller.target, {
-// 	rotation: 0.01,
-// 	force3D: true
-// });
-
-// window.addEventListener("load", onLoad);
-
-// function onLoad() {
-// 	updateScroller();
-// 	window.focus();
-// 	window.addEventListener("resize", onResize);
-// 	document.addEventListener("scroll", onScroll);
-// }
-
-// function updateScroller() {
-
-// 	var resized = scroller.resizeRequest > 0;
-
-// 	if (resized) {
-// 		var height = scroller.target.clientHeight;
-// 		body.style.height = height + "px";
-// 		scroller.resizeRequest = 0;
-// 	}
-
-// 	var scrollY = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
-
-// 	scroller.endY = scrollY;
-// 	scroller.y += (scrollY - scroller.y) * scroller.ease;
-
-// 	if (Math.abs(scrollY - scroller.y) < 0.05 || resized) {
-// 		scroller.y = scrollY;
-// 		scroller.scrollRequest = 0;
-// 	}
-
-// 	TweenLite.set(scroller.target, {
-// 		y: -scroller.y
-// 	});
-
-// 	requestId = scroller.scrollRequest > 0 ? requestAnimationFrame(updateScroller) : null;
-// }
-
-// function onScroll() {
-// 	scroller.scrollRequest++;
-// 	if (!requestId) {
-// 		requestId = requestAnimationFrame(updateScroller);
-// 	}
-// }
-
-// function onResize() {
-// 	scroller.resizeRequest++;
-// 	if (!requestId) {
-// 		requestId = requestAnimationFrame(updateScroller);
-// 	}
-// }
-
-// $('*').on('focus', function () {
-// 	scroller.resizeRequest++;
-// 	if (!requestId) {
-// 		requestId = requestAnimationFrame(updateScroller);
-// 	}
-// });
-
 const locoScroll = new LocomotiveScroll({
 	el: document.querySelector(".scroll-container"),
 	smooth: true,
 	lerp: 0.07
 });
 
-// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-
 locoScroll.on("scroll", ScrollTrigger.update);
 
-// tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
 ScrollTrigger.scrollerProxy(".scroll-container", {
 	scrollTop(value) {
 		return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-	}, // we don't have to define a scrollLeft because we're only scrolling vertically.
+	},
 	getBoundingClientRect() {
 		return {
 			top: 0,
@@ -97,14 +18,11 @@ ScrollTrigger.scrollerProxy(".scroll-container", {
 			height: window.innerHeight
 		};
 	},
-	// LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
 	pinType: document.querySelector(".scroll-container").style.transform ? "transform" : "fixed"
 });
 
-// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 ScrollTrigger.refresh();
 
 locoScroll.on('scroll', (position) => {
@@ -112,6 +30,8 @@ locoScroll.on('scroll', (position) => {
 });
 
 $(document).ready(function () {
+	$("#loading-wrap").fadeOut();
+
 	var contentSections = $(".cd-section"),
 		navigationItems = $("#cd-vertical-nav a"),
 		downArrow = $("#bottom-arrow");
@@ -120,10 +40,8 @@ $(document).ready(function () {
 		updateNavigation();
 	});
 
-	//smooth scroll to the section
 	navigationItems.on("click", function (event) {
 		event.preventDefault();
-		// smoothScroll($(this.hash));
 
 		locoScroll.scrollTo($(this).attr("href"), -60);
 	});
@@ -150,9 +68,6 @@ $(document).ready(function () {
 });
 
 function smoothScroll(target) {
-	// $("body, html").animate({
-	// 	scrollTop: target.offset().top
-	// }, 600);
 	locoScroll.scrollTo(target.offset().top - 60);
 }
 
@@ -172,9 +87,9 @@ init = () => {
 	});
 
 	typeLoop = () => {
-		typeText("HI, I'M JACOB. \n")
+		typeText("HI, I'M JACOB \n")
 			.then(() => wait(800))
-			.then(() => typeText("A UI/UX DESIGNER."))
+			.then(() => typeText("A UI/UX DESIGNER"))
 		// .then(() => removeText("HI, I'M JACOB. \n A UI/UX DESIGNER."))
 		// .then(typeLoop);
 	}

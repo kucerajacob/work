@@ -14,6 +14,10 @@ body {
 	overflow-y: scroll;
 }
 
+img {
+	pointer-events: none;
+}
+
 .section {
 	padding-bottom: 100px;
 }
@@ -25,36 +29,12 @@ body {
 	margin-left: var(--sideMargin);
 }
 
-.viewport {
-	/* overflow: hidden;
-	height: 100%;
-	width: 1600px;
-	max-width: 1600px;
-	margin: 0 auto;
-	border: 1px solid red; */
-}
-
-.navbar {
+#loading-wrap {
 	position: absolute;
-	left: var(--sideMargin);
-	right: var(--sideMargin);
-	top: 38px;
-
-	display: none;
-}
-
-.navbar li {
-	font-family: 'Roboto Mono', monospace;
-	font-weight: 500;
-	font-size: 14px;
-	display: inline;
-	margin-right: 30px;
-	color: var(--black);
-}
-
-.navbar-selected {
-	font-weight: bold;
-	color: var(--red) !important;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10000;
+	background-color: #fff;
 }
 
 .landing-text {
@@ -132,6 +112,7 @@ body {
 	display: flex;
 	align-items: center;
 	margin-bottom: 34px;
+	cursor: pointer;
 }
 
 .bottom-container-icon {
@@ -153,7 +134,7 @@ body {
 
 .redline {
 	background-color: var(--red);
-	width: 225px;
+	width: 180px;
 	height: 14px;
 	position: absolute;
 	left: -2px;
@@ -413,7 +394,7 @@ body {
 
 @media only screen and (min-width: 1500px) {
 	:root {
-		--sideMargin: 250px;
+		--sideMargin: 200px;
 	}
 }
 
