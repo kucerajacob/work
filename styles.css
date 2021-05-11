@@ -153,7 +153,7 @@ body {
 
 .redline {
 	background-color: var(--red);
-	width: 225px;
+	width: 0px;
 	height: 14px;
 	position: absolute;
 	left: -2px;
@@ -229,6 +229,20 @@ body {
 
 .no-touch #cd-vertical-nav a.is-selected .cd-dot {
 	background-color: var(--red);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+
+.no-touch #cd-vertical-nav a.is-selected .cd-label {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
 }
 
 .no-touch #cd-vertical-nav a {
