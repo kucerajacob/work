@@ -220,7 +220,7 @@ img {
 }
 
 .portfolio-image-fw {
-	width: 100%;
+	width: 100vw;
 	position: relative;
 	border-radius: 10px;
 	box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.13);
@@ -455,7 +455,7 @@ img {
 
 @media only screen and (max-width: 800px) {
 	.job-business {
-		font-size: 50px;
+		font-size: 40px;
 	}
 
 	.redline {
@@ -465,7 +465,6 @@ img {
 }
 
 @media only screen and (max-width: 700px) {
-
 	/* MOBILE VIEW */
 	:root {
 		--sideMargin: 50px;
