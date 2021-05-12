@@ -220,7 +220,7 @@ img {
 }
 
 .portfolio-image-fw {
-	width: 100vw;
+	width: 100%;
 	position: relative;
 	border-radius: 10px;
 	box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.13);
