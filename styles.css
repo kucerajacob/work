@@ -1,5 +1,5 @@
 :root {
-	--sideMargin: 80px;
+	--sideMargin: 0px;
 	--black: #130F26;
 	--red: #F73A3E;
 }
@@ -43,7 +43,7 @@ img {
 	background-color: #fff;
 }
 
-.landing-text {
+/* .landing-text {
 	font-family: 'Rubik Mono One', sans-serif;
 	font-weight: 100;
 	color: var(--red);
@@ -52,6 +52,23 @@ img {
 	letter-spacing: -4px;
 	z-index: 100;
 	margin-top: 0;
+} */
+
+.landing-text, .landing-text2 {
+	position: relative;
+	font-family: 'Rubik Mono One', sans-serif;
+	font-weight: 100;
+	color: var(--red);
+	font-size: 80px;
+	line-height: 1;
+	letter-spacing: -4px;
+	margin-top: 0;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+span {
+	display: inline-block;
 }
 
 .jacobmobile {
@@ -87,7 +104,7 @@ img {
 	position: absolute;
 	align-self: flex-end;
 	margin-bottom: -100px;
-	right: calc(var(--sideMargin) + 25px);
+	right: calc(var(--sideMargin) - 15px);
 	border-radius: 32px;
 	width: 25vw;
 	max-width: 400px;
@@ -167,14 +184,16 @@ img {
 	margin-right: calc(var(--sideMargin) + 50px);
 	margin-top: 240px;
 	margin-bottom: 20px;
+	position: relative;
 }
 
 .redline {
 	background-color: var(--red);
-	width: 180px;
+	width: 50%;
 	height: 14px;
 	position: absolute;
-	left: -2px;
+	right: calc(100% + 20px);
+	transform: scale(-1);
 	margin-top: 21px;
 	border-radius: 2px;
 }
@@ -216,11 +235,19 @@ img {
 .images-container {
 	margin-left: var(--sideMargin);
 	margin-right: var(--sideMargin);
-	max-width: 1100px;
+	width: 100%;
+}
+
+.viewport {
+	width: 75vw;
+	margin: 0 auto;
+	max-width: 1200px;
+	position: relative;
+	border: 1px solid red;
 }
 
 .portfolio-image-fw {
-	width: 100%;
+	width: 98%;
 	position: relative;
 	border-radius: 10px;
 	box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.13);
@@ -303,9 +330,9 @@ img {
 
 .no-touch #cd-vertical-nav .cd-dot {
 	position: relative;
-	top: 3px;
-	height: 14px;
-	width: 14px;
+	top: 4px;
+	height: 12px;
+	width: 12px;
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0);
 	border: 8px solid var(--red);
@@ -418,30 +445,33 @@ img {
 }
 
 @media only screen and (max-width: 1600px) {
-	.landing-text {
+	.landing-text, .landing-text2 {
 		font-size: 70px;
 	}
 }
 
 @media only screen and (max-width: 1111px) {
-	.landing-text {
+	.landing-text, .landing-text2 {
 		font-size: 60px;
 	}
 }
 
-@media only screen and (max-width: 990px) {
-	.job-desc {
-		font-size: 14px;
-		width: 100%;
-	}
-
+@media only screen and (max-width: 1100px) {
 	.job-title {
 		font-size: 14px;
 	}
 
-	.landing-text {
-		margin-top: 40px;
+	.job-desc {
+		font-size: 14px;
+		width: 100%;
 	}
+}
+
+
+@media only screen and (max-width: 990px) {
+	/* .landing-text {
+		margin-top: 40px;
+	} */
 
 	.jacobtop,
 	.jacob {
@@ -465,14 +495,19 @@ img {
 }
 
 @media only screen and (max-width: 700px) {
+
 	/* MOBILE VIEW */
 	:root {
 		--sideMargin: 50px;
 	}
 
-	.landing-text {
-		margin-top: 40px;
+	.viewport {
+		width: 100vw;
 	}
+
+	/* .landing-text {
+		margin-top: 40px;
+	} */
 
 	.portfolio-image-fw {
 		width: 100%;
@@ -506,20 +541,8 @@ img {
 }
 
 
-@media only screen and (max-width: 1000px) {
-	.landing-text {
-		font-size: 50px;
-	}
-}
-
-@media only screen and (min-width: 1500px) {
-	:root {
-		--sideMargin: 200px;
-	}
-}
-
-@media only screen and (max-width: 1500px) {
-	.redline {
-		width: 60px;
+@media only screen and (max-width: 1230px) {
+	.landing-text, .landing-text2 {
+		font-size: 58px;
 	}
 }
