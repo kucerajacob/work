@@ -517,6 +517,8 @@ span {
 		width: 100%;
 		border-radius: 0px;
 		border: 0px solid rgba(0, 0, 0, 0.1);
+		border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;	
 	}
 
 	.images-container {
