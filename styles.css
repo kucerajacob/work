@@ -9,6 +9,11 @@
 	padding: 0px;
 }
 
+#drynks-3, #drynks-5, #drynks-6 {
+	border: 0;
+	box-shadow: 0px 4px 50px rgba(0, 0, 0, 0) !important;
+}
+
 body {
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -249,7 +254,7 @@ span {
 	width: 98%;
 	position: relative;
 	border-radius: 10px;
-	box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.13);
+	/* box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.13); */
 	margin-top: 50px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 }
