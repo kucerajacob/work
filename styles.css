@@ -653,3 +653,17 @@ span {
 		font-size: 80px;
 	}
 }
+
+@media only screen and (max-height: 730px) {
+	.landing-text-mobile, .landing-text-red-mobile {
+		font-size: 60px;
+		letter-spacing: -3px;
+	}
+
+	.jacobmobile {
+		margin-bottom: 34px;
+		min-width: 230px;
+		min-height: 230px;
+		margin-left: -25px;
+	}
+}
