@@ -2,6 +2,7 @@
 	--sideMargin: 0px;
 	--black: #130F26;
 	--red: #F73A3E;
+	--deep: #262B3A;
 }
 
 * {
@@ -15,6 +16,7 @@
 }
 
 body {
+	background-color: #EAEDF3;
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
@@ -59,17 +61,81 @@ img {
 	margin-top: 0;
 } */
 
-.landing-text, .landing-text2 {
+.landing-text-red {
 	position: relative;
-	font-family: 'Rubik Mono One', sans-serif;
-	font-weight: 100;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif; 
+	font-weight: bold;
+	font-size: 120px;
 	color: var(--red);
-	font-size: 80px;
 	line-height: 1;
 	letter-spacing: -4px;
 	margin-top: 0;
-	overflow: hidden;
+	/* overflow: hidden; */
 	white-space: nowrap;
+	display: inline-block;
+}
+
+.landing-text {
+	position: relative;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif; 
+	font-weight: bold;
+	font-size: 120px;
+	color: var(--deep);
+	line-height: 1;
+	letter-spacing: -4px;
+	margin-top: 0;
+	/* overflow: hidden; */
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.landing-text-mobile {
+	position: relative;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif; 
+	font-weight: bold;
+	font-size: 120px;
+	color: var(--deep);
+	line-height: 1;
+	letter-spacing: -4px;
+	margin-top: 0;
+	/* overflow: hidden; */
+	white-space: nowrap;
+	display: none;
+}
+
+.landing-text-red-mobile {
+	position: relative;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif; 
+	font-weight: bold;
+	font-size: 120px;
+	color: var(--red);
+	line-height: 1;
+	letter-spacing: -4px;
+	margin-top: 0;
+	/* overflow: hidden; */
+	white-space: nowrap;
+	display: none;
+}
+
+.sublanding-text {
+	font-family: "HelveticaNeue-Light", "HelveticaNeue-Medium", "Helvetica Neue Light", "Helvetica Neue", sans-serif; 
+	font-size: 24px;
+	color: #8C8F9A;
+	margin-top: 10px;
+	margin-left: 5px;
+	letter-spacing: -0.02em;
+}
+
+.sublanding-text img {
+	vertical-align: middle;
+	margin-top: -5px;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+.sublanding-red {
+	color: var(--red);
+	display: inline-block;
 }
 
 span {
@@ -80,8 +146,8 @@ span {
 	border-radius: 32px;
 	max-width: 550px;
 	max-height: 550px;
-	min-width: 250px;
-	min-height: 250px;
+	min-width: 300px;
+	min-height: 300px;
 	width: 30vw;
 	transform: rotate(-2deg);
 	display: none;
@@ -89,62 +155,63 @@ span {
 	/* margin-bottom: 50px; */
 	/* opacity: 0.1;  */
 	margin-bottom: 80px;
+	margin-left: -30px;
 }
 
 .jacobtop {
 	position: absolute;
-	top: -120px;
-	right: calc(var(--sideMargin) + 140px);
-	border-radius: 32px;
+	top: -140px;
+	right: calc(var(--sideMargin) + 60px);
+	border-radius: 62px;
 	width: 25vw;
-	max-width: 400px;
-	max-height: 400px;
-	min-width: 350px;
-	min-height: 350px;
-	transform: rotate(-174.75deg);
+	max-width: 410px;
+	max-height: 410px;
+	min-width: 410px;
+	min-height: 410px;
+	transform: rotate(-18.3deg);
 	animation: jacob2 8s infinite;
 }
 
 .jacob {
 	position: absolute;
 	align-self: flex-end;
-	margin-bottom: -100px;
+	margin-bottom: -115px;
 	right: calc(var(--sideMargin) - 15px);
-	border-radius: 32px;
+	border-radius: 62px;
 	width: 25vw;
-	max-width: 400px;
-	max-height: 400px;
-	min-width: 350px;
-	min-height: 350px;
-	transform: rotate(-8.41deg);
+	max-width: 410px;
+	max-height: 410px;
+	min-width: 410px;
+	min-height: 410px;
+	transform: rotate(7.91deg);
 	animation: jacob 5s infinite;
 }
 
 @keyframes jacob {
 	0% {
-		transform: rotate(-8.41deg);
+		transform: rotate(7.91deg);
 	}
 
 	50% {
-		transform: rotate(-5.41deg);
+		transform: rotate(11.91deg);
 	}
 
 	100% {
-		transform: rotate(-8.41deg);
+		transform: rotate(7.91deg);
 	}
 }
 
 @keyframes jacob2 {
 	0% {
-		transform: rotate(-174.75deg);
+		transform: rotate(-18.3deg);
 	}
 
 	50% {
-		transform: rotate(-170.75deg);
+		transform: rotate(-12.3deg);
 	}
 
 	100% {
-		transform: rotate(-174.75deg);
+		transform: rotate(-18.3deg);
 	}
 }
 
@@ -163,8 +230,9 @@ span {
 }
 
 .bottom-container {
-	font-family: 'Rubik Mono One', sans-serif;
-	color: var(--red);
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif; 
+	font-weight: bold;
+	color: var(--deep);
 	align-self: flex-end;
 	position: absolute;
 	display: flex;
@@ -178,9 +246,8 @@ span {
 }
 
 .bottom-container-text {
-	font-size: 20px;
-	font-weight: 100;
-	letter-spacing: -0.8px;
+	font-size: 22px;
+	letter-spacing: -0.9px;
 }
 
 .job-container {
@@ -216,11 +283,12 @@ span {
 }
 
 .job-title {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 16px;
-	font-weight: 600;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif; 
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: -0.2px;
 	color: var(--red);
-	margin-top: 0px;
+	margin-top: 6px;
 }
 
 .job-title a {
@@ -228,11 +296,12 @@ span {
 }
 
 .job-desc {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 16px;
-	font-weight: bold;
-	color: var(--black);
-	opacity: 0.5;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif; 
+	font-size: 18px;
+	letter-spacing: 0.2px;
+	line-height: 30px;
+	color: var(--deep);
+	opacity: 0.55;
 	margin-top: 30px;
 	width: 800px;
 }
@@ -256,7 +325,7 @@ span {
 	border-radius: 10px;
 	/* box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.13); */
 	margin-top: 50px;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .no-touch #cd-vertical-nav {
@@ -330,19 +399,20 @@ span {
 
 .no-touch #cd-vertical-nav a.is-selected .cd-dot {
 	background-color: var(--red);
+	border: 6px solid var(--red);
 }
 
 .no-touch #cd-vertical-nav .cd-dot {
 	position: relative;
 	top: 4px;
-	height: 12px;
-	width: 12px;
-	border-radius: 50%;
-	background-color: rgba(255, 255, 255, 0);
-	border: 8px solid var(--red);
-	-webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
-	-moz-transition: -moz-transform 0.2s, background-color 0.5s;
-	transition: transform 0.2s, background-color 0.5s;
+	height: 14px;
+	width: 14px;
+	border-radius: 100%;
+	background-color: rgba(95, 71, 71, 0);
+	border: 6px solid #BBC1CF;
+	-webkit-transition: -webkit-transform 0.2s, scale 0.5s;
+	-moz-transition: -moz-transform 0.2s, scale 0.5s;
+	transition: transform 0.2s, scale 0.5s;
 	-webkit-transform-origin: 50% 50%;
 	-moz-transform-origin: 50% 50%;
 	-ms-transform-origin: 50% 50%;
@@ -351,12 +421,13 @@ span {
 }
 
 .no-touch #cd-vertical-nav .cd-label {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 16px;
-	font-weight: 900;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif; 
+	font-weight: bold;
+	font-size: 14px;
+	letter-spacing: -0.5px;
 	text-transform: uppercase;
 	position: relative;
-	top: 0px;
+	top: 2px;
 	left: 8px;
 	margin-right: 10px;
 	padding: 7px 8px;
@@ -448,33 +519,48 @@ span {
 	width: 8px !important;
 }
 
-@media only screen and (max-width: 1600px) {
-	.landing-text, .landing-text2 {
-		font-size: 70px;
+@media only screen and (max-width: 1500px) {
+	.landing-text, .landing-text-red {
+		font-size: 100px;
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	.landing-text, .landing-text-red {
+		font-size: 90px;
 	}
 }
 
 @media only screen and (max-width: 1111px) {
-	.landing-text, .landing-text2 {
-		font-size: 60px;
+	.landing-text, .landing-text-red {
+		font-size: 80px;
 	}
 }
 
 @media only screen and (max-width: 1100px) {
 	.job-title {
-		font-size: 14px;
+		/* font-size: 18px; */
 	}
 
 	.job-desc {
-		font-size: 14px;
+		/* font-size: 18px; */
 		width: 100%;
 	}
 }
 
 
 @media only screen and (max-width: 990px) {
-	.landing-text, .landing-text2 {
-		font-size: 45px !important;
+	.landing-text, .landing-text-red {
+		font-size: 50px !important;
+		letter-spacing: -0.025em;
+	}
+
+	.sublanding-text {
+		font-size: 24px;
+		margin-top: 24px;
+		margin-left: 2px;
+		width: 280px;
+		line-height: 34px;
 	}
 
 	.jacobtop,
@@ -489,7 +575,7 @@ span {
 
 @media only screen and (max-width: 800px) {
 	.job-business {
-		font-size: 40px;
+		font-size: 46px;
 	}
 
 	.redline {
@@ -502,7 +588,7 @@ span {
 
 	/* MOBILE VIEW */
 	:root {
-		--sideMargin: 50px;
+		--sideMargin: 40px;
 	}
 
 	.viewport {
@@ -544,16 +630,26 @@ span {
 		display: block;
 		margin-top: -100px;
 	}
+
+	.landing-text, .landing-text-red {
+		display: none;
+	}
+
+	.landing-text-mobile, .landing-text-red-mobile {
+		font-size: 70px;
+		letter-spacing: -4.5px;
+		display: inline;
+	}
 }
 
 @media only screen and (max-width: 647px) {
-	.landing-text, .landing-text2 {
-		font-size: 24px !important;
+	.landing-text, .landing-text-red {
+		font-size: 40px !important;
 	}
 }
 
 @media only screen and (max-width: 1230px) {
-	.landing-text, .landing-text2 {
-		font-size: 58px;
+	.landing-text, .landing-text-red {
+		font-size: 80px;
 	}
 }

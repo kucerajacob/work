@@ -80,14 +80,14 @@ locoScroll.on('call', func => {
 
 // -----------------------------------------------------
 
-var headline = $(".landing-text");
+var headline = $(".landing-text, .landing-text-red");
 var char = '[class*="char"]';
 var char2 = '[class*="khar"]';
 var tl = new TimelineLite();
 var tl2 = new TimelineLite();
 
 // Using lettering.js to wrap a <span> around each word and a <span> around each character.
-headline.lettering("words").children("span").lettering();
+// headline.lettering("words").children("span").lettering();
 
 tl.staggerFrom(char, 0.4, {
 	y: "100%",
