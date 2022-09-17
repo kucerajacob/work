@@ -165,10 +165,10 @@ span {
 	right: calc(var(--sideMargin) + 60px);
 	border-radius: 62px;
 	width: 25vw;
-	max-width: 410px;
-	max-height: 410px;
-	min-width: 410px;
-	min-height: 410px;
+	max-width: 435px;
+	max-height: 435px;
+	min-width: 435px;
+	min-height: 435px;
 	transform: rotate(-18.3deg);
 	animation: jacob2 8s infinite;
 }
@@ -180,10 +180,10 @@ span {
 	right: calc(var(--sideMargin) - 15px);
 	border-radius: 62px;
 	width: 25vw;
-	max-width: 410px;
-	max-height: 410px;
-	min-width: 410px;
-	min-height: 410px;
+	max-width: 435px;
+	max-height: 435px;
+	min-width: 435px;
+	min-height: 435px;
 	transform: rotate(7.91deg);
 	animation: jacob 5s infinite;
 }
