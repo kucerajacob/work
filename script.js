@@ -26,7 +26,15 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 
 locoScroll.on('scroll', (position) => {
+	var bgOpacity = 0 + position.scroll.y / 800;
+
+	if (bgOpacity >= 0.75) {
+		bgOpacity = 0.75;
+	}
+
 	$(".bottom-container").css("opacity", 1 - position.scroll.y / 800);
+	$("#bg").css("opacity", 0.7 - position.scroll.y / 800);
+	$("#top-nav-container").css("backgroundColor", "rgba(7, 9, 14," + bgOpacity + ")");
 });
 
 $(document).ready(function () {
@@ -103,89 +111,4 @@ $.wait = function(ms) {
 tl2.staggerFrom(char2, 0.4, {
 	y: "100%",
 	ease: "inOutCubic"
-}, 0.03)
-
-
-// init = () => {
-// 	wait(250).then(() => {
-// 		clearText();
-// 		typeText(" ").then(typeLoop);
-// 	});
-
-// 	typeLoop = () => {
-// 		typeText("HI, I'M JACOB \n")
-// 			.then(() => wait(800))
-// 			.then(() => typeText("A UI/UX DESIGNER"))
-// 		// .then(() => removeText("HI, I'M JACOB. \n A UI/UX DESIGNER."))
-// 		// .then(typeLoop);
-// 	}
-// }
-
-// const elementNode = document.getElementById("landing-text");
-// let text = "";
-
-// updateNode = () => {
-// 	elementNode.innerText = text;
-// }
-
-// pushCharacter = (character) => {
-// 	text += character;
-// 	updateNode();
-// }
-
-// popCharacter = () => {
-// 	text = text.slice(0, text.length - 1);
-// 	updateNode();
-// }
-
-// clearText = () => {
-// 	text = "";
-// 	updateNode();
-// }
-
-// typeCharacter = (character) => {
-// 	return new Promise((resolve) => {
-// 		pushCharacter(character);
-// 		wait().then(resolve);
-// 	});
-// }
-
-// removeCharacter = () => {
-// 	return new Promise((resolve) => {
-// 		popCharacter();
-// 		wait().then(resolve);
-// 	});
-// };
-
-// typeText = (text) => {
-// 	return new Promise((resolve) => {
-// 		function type([character, ...text]) {
-// 			typeCharacter(character).then(() => {
-// 				if (text.length) type(text);
-// 				else resolve();
-// 			});
-// 		}
-
-// 		type(text);
-// 	});
-// }
-
-// removeText = ({
-// 	length: amount
-// }) => {
-// 	return new Promise((resolve) => {
-// 		function remove(count) {
-// 			removeCharacter().then(() => {
-// 				if (count > 1) {
-// 					remove(count - 1);
-// 				} else {
-// 					resolve();
-// 				}
-// 			});
-// 		}
-
-// 		remove(amount);
-// 	});
-// }
-
-// init();
+}, 0.03);

@@ -33,6 +33,7 @@
 
 <body>
 	<div id="loading-wrap"></div>
+	<div id="bg"></div>
 
 	<nav id="cd-vertical-nav">
 		<ul>
@@ -94,43 +95,49 @@
 		</ul>
 	</nav>
 
+	<div id="top-nav-container">
+		<nav id="top-nav">
+			<ul>
+				<li>
+					<img src="images/jk.svg" alt="">
+				</li>
+
+				<div id="top-nav-right">
+					<li>
+						<a href="/images/RESUME.pdf" target="_blank">RESUME</a>
+					</li>
+
+					<li>
+						<a href="mailto:kucerajacob@gmail.com">CONTACT</a>
+					</li>
+				</div>
+			</ul>
+		</nav>
+	</div>
+
 	<div id="scroll-container" class="scroll-container">
 		<section class="viewport">
 
 			<section id="section1" class="cd-section" data-scroll data-scroll-call="section1">
 				<div id="section1-mobile">
-					<img src="images/jacob_skeue_bottom.png" class="jacobmobile">
-					<!-- <h1 class="landing-text" id="landing-text"></h1> -->
-					<div>
-						<h1 class="landing-text">Hello! I'm</h1><h1 class="landing-text-red">&nbspJacob</h1>
-
-						<h1 class="landing-text-mobile">Hello!<br>I'm</h1><h1 class="landing-text-red-mobile">&nbspJacob</h1>
-
-						<p class="sublanding-text">
-							I'm a
-							<span class="sublanding-red"><img src="images/pen-tool.svg">UI/UX Designer</span>
-							from 
-							<span class="sublanding-red"><img src="images/map-pin.svg">San Francisco, CA</span>
-						</p>
-
-						<!-- <h1 class="landing-text2">
-							<span class="word1"><span class="khar1">A</span></span>
-							<span class="word2">
-								<span class="khar1">U</span><span class="khar2">I</span><span
-									class="khar3">/</span><span class="khar4">U</span><span
-									class="khar5">X</span></span> <span class="word3"><span
-									class="khar1">D</span><span class="khar2">E</span><span
-									class="khar3">S</span><span class="khar4">I</span><span
-									class="khar5">G</span><span class="khar6">N</span><span
-									class="khar7">E</span><span class="khar8">R</span><span
-									class="khar9">.</span></span>
-								</h1> -->
+					<div class="section1-wrap">
+						<img src="images/jacobkucera.svg" class="jacobkucera">
+						<img src="images/jacobkucera_mobile.svg" class="jacobkucera-mobile">
+						<p class="sublanding-text">Senior UI/UX Designer at Web Advisors with 6 years of experience.</p>
+					
+						<div class="isophone-mobile-container">
+							<img src="images/isophone.png" class="isophone-mobile">
+							<img src="images/isophone2.png" class="isophone2-mobile">
+							<img src="images/isophone3.png" class="isophone3-mobile">
+						</div>
 					</div>
-					<h1></h1>
+
+					<!-- <img src="images/scroll_for_portfolio.svg" class="bottom-container-icon-mobile"> -->
 				</div>
 
-				<img src="images/jacob_skeue_bottom.png" class="jacobtop">
-				<img src="images/jacob_skeue_bottom.png" class="jacob">
+				<img src="images/isophone.png" class="isophone">
+				<img src="images/isophone2.png" class="isophone2">
+				<img src="images/isophone3.png" class="isophone3">
 
 				<div class="bottom-container">
 					<img src="images/scroll_for_portfolio.svg" class="bottom-container-icon">
@@ -143,12 +150,12 @@
 					<h2 class="job-business">
 						Z-AXIS
 					</h2>
-					<p class="job-title">UI/UX Designer — <a href="https://www.swingfall.com/"
+					<p class="job-title">Lead UI/UX Designer &nbsp—&nbsp <a href="https://www.swingfall.com/"
 							target="_blank">swingfall.com</a>
 					</p>
 
 					<p class="job-desc">
-						Worked directly with a team of engineers and developers to design the full look-and-feel of the Z-AXIS mobile app from the ground-up to help redefine fall protection, safety and compliance for construction and facility workers working at height.
+						Swing-fall protection monitoring mobile app currently being used by Boeing.
 					</p>
 				</div>
 
@@ -156,11 +163,26 @@
 					<img src="images/Z-AXIS/1.png" class="portfolio-image-fw fade" id="zaxis-1" data-scroll
 						data-scroll-call="#zaxis-1">
 
+					<div class="img-desc-container">
+						<p class="img-desc-heading">The Brand</p>
+						<p class="img-desc">In addition to building an entire 200+ wireframe design system from the ground up, I was tasked with designing the logo. It was important to have a logo that was scalable, and had the defining features, colors, look, and feel of what the Z-AXIS Radian encompasses.</p>
+					</div>
+
 					<img src="images/Z-AXIS/2.png" class="portfolio-image-fw fade" id="zaxis-2" data-scroll
 						data-scroll-call="#zaxis-2">
+					
+					<div class="img-desc-container">
+						<p class="img-desc-heading">Content First</p>
+						<p class="img-desc">When being tasked to design a user interface for situations in which peoples lives were on the line, it was important for the design to convey as much visual simplicity as possible, I like to follow the philosophy of "content first" because it is the order in which content is displayed that is the most important to the needs of the end-user.</p>
+					</div>
 
 					<img src="images/Z-AXIS/3.png" class="portfolio-image-fw fade" id="zaxis-3" data-scroll
 						data-scroll-call="#zaxis-3">
+
+					<div class="img-desc-container">
+						<p class="img-desc-heading">Onboarding</p>
+						<p class="img-desc">All users are required to go through an onboarding setup process in which they log all information needed cases of emergency. It's quite the lengthy process which is why it was crucial to add aspects of gamification, leading the user step-by-step, visualized by blue navigation dots.</p>
+					</div>
 
 					<img src="images/Z-AXIS/4.png" class="portfolio-image-fw fade" id="zaxis-4" data-scroll
 						data-scroll-call="#zaxis-4">
@@ -173,12 +195,12 @@
 					<h2 class="job-business">
 						DRYNKS
 					</h2>
-					<p class="job-title">UI/UX Designer — <a href="https://www.drynks.com/"
+					<p class="job-title">Lead UI/UX Designer — <a href="https://www.drynks.com/"
 							target="_blank">drynks.com</a>
 					</p>
 
 					<p class="job-desc">
-						Conducted user studies and analyzed user data to completely revamp, restructure and redesign the entire front-end user interface for both mobile and desktop views.
+						Dating desktop and mobile app with over 50,000 users.
 					</p>
 				</div>
 
@@ -186,17 +208,31 @@
 					<img src="images/DRYNKS/6.png" class="portfolio-image-fw fade" id="drynks-6" data-scroll
 						data-scroll-call="#drynks-6">
 
+					<div class="img-desc-container">
+						<p class="img-desc-heading">My Role</p>
+						<p class="img-desc">At DRYNKS, I was responsible for building the entire design system from scratch. I managed user-flows, interaction models, and sitemaps to resolve painpoints, allowing users to more effectively find romantic partners.</p>
+					</div>
+
 					<img src="images/DRYNKS/2.png" class="portfolio-image-fw fade" id="drynks-2" data-scroll
 						data-scroll-call="#drynks-2">
 
 					<img src="images/DRYNKS/1.png" class="portfolio-image-fw fade" id="drynks-1" data-scroll
 						data-scroll-call="#drynks-1">
 
-					<img src="images/DRYNKS/3.png" class="portfolio-image-fw fade" id="drynks-3" data-scroll
-						data-scroll-call="#drynks-3">
+					<div class="img-desc-container">
+						<p class="img-desc">The leadership team at DRYNKS made it clear from the start that it's not a swipe-like dating app, instead, we had to figure out a way to create a visual system in which viewing multiple profiles, requesting dates, virtual dates and chats was all possible on one page.</p>
+					</div>
 
 					<img src="images/DRYNKS/4.png" class="portfolio-image-fw fade" id="drynks-4" data-scroll
 						data-scroll-call="#drynks-4">
+
+					<div class="img-desc-container">
+						<p class="img-desc-heading">Advertising Design</p>
+						<p class="img-desc">In addition to UI/UX, I was tasked to design advertisements for both billboard and web use. I came up with the visual themes and illustrations and was provided ad verbiage from the leadership team.</p>
+					</div>
+
+					<img src="images/DRYNKS/3.png" class="portfolio-image-fw fade" id="drynks-3" data-scroll
+						data-scroll-call="#drynks-3">
 				</div>
 			</section>
 
@@ -204,7 +240,7 @@
 				<div class="job-container">
 					<div class="redline"></div>
 					<h2 class="job-business">
-						BULLISH
+						Bullish
 					</h2>
 					<p class="job-title">UI/UX Designer — <a href="https://canary.bullish.studio/"
 							target="_blank">bullish.studio</a>
@@ -238,7 +274,7 @@
 			<section id="section5" class="cd-section" data-scroll data-scroll-call="section5">
 				<div class="job-container">
 					<div class="redline"></div>
-					<h2 class="job-business">STRICTLY<br>DELIVERIES</h2>
+					<h2 class="job-business">Strictly<br>Deliveries</h2>
 					<p class="job-title">UI/UX Designer — Contract for Client</p>
 
 					<p class="job-desc">
