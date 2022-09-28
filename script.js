@@ -51,7 +51,7 @@ $(document).ready(function () {
 	navigationItems.on("click", function (event) {
 		event.preventDefault();
 
-		locoScroll.scrollTo($(this).attr("href"), -60);
+		locoScroll.scrollTo($(this).attr("href"), -100);
 	});
 
 	function updateNavigation() {
