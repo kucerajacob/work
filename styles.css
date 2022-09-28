@@ -120,7 +120,7 @@ img {
 	width: 340px;
 }
 
-.jacobkucera-mobile {
+.jacobkucera-mobile, .jacobkucera-heightmod {
 	display: none;
 }
 
@@ -817,10 +817,6 @@ span {
 		width: 230px;
 		height: 176px;
 	}
-}
-
-.jacobkucera-heightmod {
-	display: none;
 }
 
 @media only screen and (max-height: 600px) {
