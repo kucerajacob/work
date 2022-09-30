@@ -722,49 +722,9 @@ span {
 }
 
 @media only screen and (max-width: 400px) {
-	/* #section1 {
-		width: auto;
-		margin-left: 0;
-		height: -webkit-fill-available;
+	.job-desc {
+		width: 80vw;
 	}
-
-	.isophone-mobile-container {
-		display: block;
-		width: 350px !important;
-		height: 265px !important;
-		margin-top: 42px;
-		margin-left: -8px;
-	}
-
-	.bottom-container-icon {
-		height: 22px;
-	}
-
-	.sublanding-text {
-		margin-top: 20px;
-		width: 200px !important;
-	}
-
-	.jacobkucera-mobile {
-		display: none;
-	}
-
-	.jacobkucera-heightmod {
-		display: block;
-		height: 60px;
-	}
-
-	#top-nav {
-		padding: 26px 0px;
-	}
-
-	#top-nav ul {
-		font-size: 15px;
-	}
-
-	.bottom-container {
-		margin-bottom: 18px;
-	} */
 }
 
 @media only screen and (max-height: 900px) {
