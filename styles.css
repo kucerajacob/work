@@ -38,12 +38,12 @@ img {
 }
 
 #bg {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: url(images/bg.png) no-repeat center center fixed;
+	background: url(images/bg.png) no-repeat center center;
 	background-size: cover;
 	opacity: 0.7;
 	-moz-appearance: none;
@@ -696,7 +696,7 @@ span {
 	
 	.img-desc-heading {
 		font-size: 32px;
-		width: 350px;
+		width: auto;
 	}
 	
 	.img-desc {
@@ -721,38 +721,50 @@ span {
 	}
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 400px) {
+	/* #section1 {
+		width: auto;
+		margin-left: 0;
+		height: -webkit-fill-available;
+	}
+
 	.isophone-mobile-container {
 		display: block;
-		margin-top: 40px;
-		width: 370px;
-		height: 280px;
+		width: 350px !important;
+		height: 265px !important;
+		margin-top: 42px;
+		margin-left: -8px;
+	}
+
+	.bottom-container-icon {
+		height: 22px;
+	}
+
+	.sublanding-text {
+		margin-top: 20px;
+		width: 200px !important;
+	}
+
+	.jacobkucera-mobile {
+		display: none;
+	}
+
+	.jacobkucera-heightmod {
+		display: block;
+		height: 60px;
 	}
 
 	#top-nav {
 		padding: 26px 0px;
 	}
 
-	.bottom-container {
-		margin-bottom: 18px;
-	}
-}
-
-@media only screen and (max-width: 360px) {
-	.isophone-mobile-container {
-		display: block;
-		margin-top: 60px;
-		width: 4230px;
-		height: 280px;
-	}
-
-	#top-nav {
-		padding: 26px 0px;
+	#top-nav ul {
+		font-size: 15px;
 	}
 
 	.bottom-container {
 		margin-bottom: 18px;
-	}
+	} */
 }
 
 @media only screen and (max-height: 900px) {
@@ -819,7 +831,7 @@ span {
 	}
 }
 
-@media only screen and (max-height: 600px) {
+@media only screen and (max-height: 600px) and (max-width: 600px) {
 	.isophone-mobile-container {
 		width: 200px;
 		height: 188px;
@@ -832,12 +844,279 @@ span {
 		margin-top: 18px;
 	}
 
-	.jacobkucera-mobile {
+	.jacobkucera-mobile, .jacobkucera {
 		display: none;
 	}
 
 	.jacobkucera-heightmod {
 		display: block;
 		height: 50px;
+	}
+}
+
+@media only screen and (max-height: 500px) {
+	.jacobkucera {
+		width: 190px;
+	}
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait */
+@media only screen 
+	and (min-device-width: 375px) 
+	and (max-device-width: 812px) 
+	and (-webkit-min-device-pixel-ratio: 3)
+	and (orientation: portrait) {
+
+	#section1 {
+		width: auto;
+		margin-left: 0;
+		height: -webkit-fill-available;
+	}
+
+	.isophone-mobile-container {
+		display: block;
+		width: 350px;
+		height: 262px;
+		margin-top: 45px;
+		margin-left: -8px;
+	}
+
+	.bottom-container-icon {
+		height: 22px;
+	}
+
+	.sublanding-text {
+		margin-top: 20px;
+		font-size: 18px;
+		width: 310px;
+	}
+
+	.jacobkucera-mobile {
+		display: none;
+	}
+
+	.jacobkucera-heightmod {
+		display: block;
+		height: 67px;
+	}
+
+	#top-nav {
+		padding: 26px 0px;
+	}
+
+	#top-nav ul {
+		font-size: 15px;
+	}
+
+	.bottom-container {
+		margin-bottom: 18px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+	and (min-device-width: 375px) 
+	and (max-device-width: 812px) 
+	and (-webkit-min-device-pixel-ratio: 3)
+	and (orientation: landscape) {
+
+	#section1 {
+		width: auto;
+		margin-left: 0;
+		height: -webkit-fill-available;
+	}
+
+	.isophone-mobile-container {
+		display: none;
+	}
+
+	.section1-wrap {
+		display: block;
+		top: 90px;
+		left: var(--sideMargin);
+		transform: none;
+	}
+
+	.isophone, .isophone2, .isophone3 {
+		display: block;
+		margin-top: 50px;
+		width: 290px;
+	}
+
+	.img-desc-heading {
+		font-size: 40px;
+	}
+	
+	.job-desc {
+		font-size: 10px;
+	}
+
+	.bottom-container {
+		display: block;
+		height: 28px;
+		left: var(--sideMargin);
+		transform: none;
+	}
+
+	.sublanding-text {
+		margin-top: 20px;
+		font-size: 18px;
+		width: 310px;
+		text-align: left;
+	}
+
+	.bottom-container {
+		left: var(--sideMargin);
+	}
+
+	.jacobkucera-mobile {
+		display: none;
+	}
+
+	.jacobkucera-heightmod {
+		display: block;
+		height: 68px;
+	}
+
+	#top-nav {
+		padding: 26px 0px;
+	}
+
+	#top-nav ul {
+		font-size: 15px;
+	}
+
+	.bottom-container {
+		margin-bottom: 18px;
+	}
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+@media only screen 
+	and (min-device-width: 375px) 
+	and (max-device-width: 667px) 
+	and (-webkit-min-device-pixel-ratio: 2)
+	and (orientation: portrait) { 
+	#section1 {
+		width: auto;
+		margin-left: 0;
+		height: -webkit-fill-available;
+	}
+
+	.isophone-mobile-container {
+		display: block;
+		width: 300px;
+		height: 240px;
+		margin-top: 25px;
+		margin-left: -8px;
+	}
+
+	.bottom-container-icon {
+		height: 22px;
+	}
+
+	.sublanding-text {
+		margin-top: 20px;
+		font-size: 18px;
+		width: 310px;
+	}
+
+	.jacobkucera-mobile {
+		display: none;
+	}
+
+	.jacobkucera-heightmod {
+		display: block;
+		height: 67px;
+		margin-top: 5px;
+	}
+
+	#top-nav {
+		padding: 26px 0px;
+	}
+
+	#top-nav ul {
+		font-size: 15px;
+	}
+
+	.bottom-container {
+		height: 30px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+	and (min-device-width: 375px) 
+	and (max-device-width: 667px) 
+	and (-webkit-min-device-pixel-ratio: 2)
+	and (orientation: landscape) {
+	#section1 {
+		width: auto;
+		margin-left: 0;
+		height: -webkit-fill-available;
+	}
+
+	.isophone-mobile-container {
+		display: none;
+	}
+
+	.section1-wrap {
+		display: block;
+		top: 90px;
+		left: var(--sideMargin);
+		transform: none;
+	}
+
+	.isophone, .isophone2, .isophone3 {
+		display: block;
+		margin-top: 50px;
+		width: 290px;
+	}
+
+	.img-desc-heading {
+		font-size: 40px;
+	}
+	
+	.job-desc {
+		font-size: 10px;
+	}
+
+	.bottom-container {
+		display: block;
+		height: 28px;
+		left: var(--sideMargin);
+		transform: none;
+	}
+
+	.sublanding-text {
+		margin-top: 20px;
+		font-size: 18px;
+		width: 310px;
+		text-align: left;
+	}
+
+	.bottom-container {
+		left: var(--sideMargin);
+	}
+
+	.jacobkucera-mobile {
+		display: none;
+	}
+
+	.jacobkucera-heightmod {
+		display: block;
+		height: 68px;
+	}
+
+	#top-nav {
+		padding: 26px 0px;
+	}
+
+	#top-nav ul {
+		font-size: 15px;
 	}
 }
