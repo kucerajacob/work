@@ -879,12 +879,12 @@ span {
 		display: block;
 		width: 350px;
 		height: 262px;
-		margin-top: 45px;
+		margin-top: 55px !important;
 		margin-left: -8px;
 	}
 
-	.bottom-container-icon {
-		height: 22px;
+	.bottom-container {
+		margin-bottom: 10px;
 	}
 
 	.sublanding-text {
@@ -908,10 +908,6 @@ span {
 
 	#top-nav ul {
 		font-size: 15px;
-	}
-
-	.bottom-container {
-		margin-bottom: 18px;
 	}
 }
 
