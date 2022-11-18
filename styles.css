@@ -126,12 +126,12 @@ img {
 
 .sublanding-text {
 	font-family: 'Inter Tight', sans-serif;
-	font-size: 32px;
+	font-size: 30px;
 	font-weight: 700;
 	color: var(--text);
 	margin-top: 30px;
 	letter-spacing: -0.02em;
-	width: 320px;
+	width: 350px;
 }
 
 span {
@@ -518,8 +518,8 @@ span {
 	}
 
 	.sublanding-text {
-		font-size: 30px;
-		width: 300px;
+		font-size: 27px;
+		width: 340px;
 	}
 }
 
@@ -540,7 +540,7 @@ span {
 
 	.sublanding-text {
 		font-size: 24px;
-		width: 240px;
+		width: 260px;
 	}
 
 	.isophone, .isophone2, .isophone3 {
@@ -556,7 +556,7 @@ span {
 
 	.sublanding-text {
 		font-size: 22px;
-		width: 230px;
+		width: 240px;
 	}
 
 	.isophone, .isophone2, .isophone3 {
@@ -764,7 +764,7 @@ span {
 
 	.sublanding-text {
 		font-size: 20px;
-		width: 200px;
+		width: 220px;
 	}
 
 	.jacobkucera-mobile {
